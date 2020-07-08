@@ -1,0 +1,52 @@
+﻿Scene,AppTime,Actor,Event_Category,Event_Type,Object,Attributes
+Instruction,2.85833,SYSTEM,SCENE,START,Start(),AdminEvent.cs
+IntroScene,2.954415,SYSTEM,SCENE,START,Start(),scene_name:IntroEvent.cs
+MartScene,3.894667,ADMIN,ACTION,CLICK,BtnStart(),CONTENS_START!!
+sc Load,5.402276,SYSTEM,SCENE,START,Start(),scene_name:ScanningEvent_After.cs
+,5.40915,SYSTEM,SCENE,START,Start(),scene_name:Screen1Event.cs
+,5.419577,SYSTEM,SCENE,START,Start(),scene_name:ScanningEvent_Before.cs
+,5.427241,SYSTEM,SCENE,START,Start(),scene_name:CardEvent.cs
+,5.437599,SYSTEM,SCENE,START,Start(),scene_name:Notification.cs
+,5.447886,SYSTEM,SCENE,START,Start(),scene_name:MartIntroEvent.cs
+,5.457313,SYSTEM,SCENE,START,Start(),scene_name:Screen1Event.cs
+,5.468526,SYSTEM,SCENE,START,Start(),scene_name:ScannerEvent.cs
+scan,17.42707,USER,ACTION,BEFORE_SCANNING_ENTER,Cheese,item_code:Cheese1
+,27.00426,USER,ACTION,ADD,Coffee,item_code:Coffee1
+1st call sart,27.05455,SYSTEM,ACTION,NOTIFICATION,Phone Calling,Taking a phone call
+scan,31.55565,USER,ACTION,BEFORE_SCANNING_EXIT,Cheese,item_code:Cheese1
+,32.19621,USER,ACTION,ADD,Cheese,item_code:Cheese1
+,35.48231,USER,ACTION,ADD,Cabbage,item_code:Cabbage1
+,38.5713,USER,ACTION,ADD,Tomato,item_code:Tomato1
+,41.41565,USER,ACTION,ADD,Baguette,item_code:Baguette1
+,44.28537,USER,ACTION,ADD,Cheese,item_code:Cheese2
+1st call end,46.0728,SYSTEM,ACTION,NOTIFICATION,Update(),NOTIFICATION_DISAPPEARS
+touch the pay button,47.20875,USER,ACTION,TOUCH,Screen1:btn_pay(),After discount code
+Change the screen,48.20051,SYSTEM,SCREEN,CHANGE,ChangeCanvas1toCanvas2After1s(),Screen1 to Screen2
+,48.21626,SYSTEM,SCENE,START,Start(),scene_name:Screen2Event.cs
+Entehr the d.c,51.29821,USER,ACTION,TOUCH,Screen2:Key_A(),Key_A
+,52.00069,USER,ACTION,TOUCH,Screen2:Key_1(),Key_1
+,52.60178,USER,ACTION,TOUCH,Screen2:Key_B(),Key_B
+,53.18667,USER,ACTION,TOUCH,Screen2:Key_1(),Key_1
+touch the enter button,53.9934,USER,ACTION,TOUCH,Screen2:btn_enter(),btn_enter
+code SUCC,54.01439,SYSTEM,ACTION,RESULT_MSG,Screen2:btn_back(),msg:Discount code has been applied!|^|SUCC
+Change the screen,54.99335,SYSTEM,SCREEN,CHANGE,ChangeCanvas2toCanvas1After1s(),Screen2 to Screen1
+touch the pay button,56.09974,USER,ACTION,TOUCH,Screen1:btn_pay(),After discount code
+message appears,56.11312,SYSTEM,ACTION,RESULT_MSG,Screen1:btn_pay(),msg:Please make a payment.|^|msg_type:스캔한 아이템 있음
+touch the card,67.76368,USER,ACTION,PAY,OnTriggerEnter(),touch the card!
+FAILED to PAY,67.77538,USER,ACTION,PAY,OnTriggerExit(),Faild to pay
+touch the cancel button,75.29164,USER,ACTION,TOUCH,Screen1:btn_cancel(),btn_cancel
+message appears,75.3036,SYSTEM,ACTION,RESULT_MSG,Screen1:btn_cancel(),msg:If you want to cancel an item
+,75.3212,SYSTEM,SCENE,START,Start(),scene_name:Screen1Event.cs
+touch the card,97.12626,USER,ACTION,PAY,OnTriggerEnter(),touch the card!
+Remove an item,100.2431,SYSTEM,SYSTEM_MESSAGE,REMOVE,Tomato,msg:Please scan what you want to cancel then put on the left table then try again to make a payment.
+,100.2565,USER,ACTION,REMOVE,Tomato,item_code:Tomato1
+,105.8362,SYSTEM,SYSTEM_MESSAGE,REMOVE,Cabbage,msg:Please scan what you want to cancel then put on the left table then try again to make a payment.
+,105.8504,USER,ACTION,REMOVE,Cabbage,item_code:Cabbage1
+finished the cancel,108.7873,USER,ACTION,TOUCH,Screen1:btn_completed(),btn_completed
+message appears,108.8028,SYSTEM,ACTION,RESULT_MSG,Screen1:btn_completed(),msg:Please make a payment.
+touch the pay button,110.2072,USER,ACTION,TOUCH,Screen1:btn_pay(),After discount code
+message appears,110.2288,SYSTEM,ACTION,RESULT_MSG,Screen1:btn_pay(),msg:Please make a payment.|^|msg_type:스캔한 아이템 있음
+touch the card again,123.1453,USER,ACTION,PAY,OnTriggerEnter(),touch the card!
+SUCC pay,123.157,USER,ACTION,PAY,OnTriggerExit(),Succed to pay
+Change the screen,131.1471,SYSTEM,SCREEN,CHANGE,ChangeCanvas1toCanvas3After2s(),Scene Change!
+end Scene,131.3135,SYSTEM,SCENE,START,START(),scene_name:EndEvent.cs
