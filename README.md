@@ -2,7 +2,7 @@
 < Environment >
 - UNITY version: 2019.2.18f
 - VIVE PRO
-- Unity Interaction System from The Lab guide:: https://valvesoftware.github.io/steamvr_unity_plugin/articles/Interactiona-System.html
+- Unity Interaction System from The Lab guide:: https://valvesoftware.github.io/steamvr_unity_plugin/articles/Interaction-System.html
 
 < Problem >
 1. Women realistic hands not working on my project.
