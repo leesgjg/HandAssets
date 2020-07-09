@@ -1,7 +1,6 @@
 # HandAssets
 < Environment >
 - UNITY version: 2019.2.18f
-- VIVE EYE tracking
 - VIVE PRO
 - Unity Interaction System from The Lab guide:: https://valvesoftware.github.io/steamvr_unity_plugin/articles/Interactiona-System.html
 
