@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2927684672117922646}
   - component: {fileID: 2927684672117922645}
   - component: {fileID: 2927684672117922644}
+  - component: {fileID: 7339056094729453916}
   m_Layer: 0
   m_Name: RealsticWomanR
   m_TagString: Untagged
@@ -69,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: 0
-  inputManager: {fileID: 11400000, guid: 1fc59b4552fbc4e4792630786d2a2598, type: 2}
+  inputManager: {fileID: 11400000, guid: 1e364eb4d82813c4980ea592f50e5ea6, type: 2}
   colliderPosition: {x: 0, y: 0, z: 0}
   collisionRadius: 0.02
   interactingLayers:
@@ -109,7 +110,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013c8b57fc1786a42b0797fb0eea2707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputManager: {fileID: 11400000, guid: 1fc59b4552fbc4e4792630786d2a2598, type: 2}
+  inputManager: {fileID: 11400000, guid: 1e364eb4d82813c4980ea592f50e5ea6, type: 2}
+--- !u!114 &7339056094729453916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2927684672117922643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3335560677ba95d4081ffde8eb33f434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenScale: 1
 --- !u!95 &6580933629354194845
 Animator:
   serializedVersion: 3

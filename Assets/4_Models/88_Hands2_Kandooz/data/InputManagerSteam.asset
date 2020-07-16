@@ -25,7 +25,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/Squeeze
     needsReinit: 0
   thumb:
-    actionPath: /actions/default/in/Squeeze
+    actionPath: /actions/htc_viu/in/viu_axis_0x
     needsReinit: 0
   trigger:
     actionPath: /actions/default/in/InteractUI
