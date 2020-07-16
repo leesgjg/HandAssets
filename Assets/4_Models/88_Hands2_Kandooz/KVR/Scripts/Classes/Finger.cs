@@ -13,6 +13,8 @@ namespace Kandooz.KVR
         Middle = 2,
         Ring = 3,
         Pinky = 4,
+        Trigger=5,
+        Grip=6,
         
     }
     [System.Serializable]
@@ -21,7 +23,8 @@ namespace Kandooz.KVR
         AnimationLayerMixerPlayable mixer;
          [Range(0, 1)] [SerializeField] private float weight;
         private float lastweight = 0;
-        private CrossFadingFloat crossFadingWeight;
+        private TweenableFloat crossFadingWeight;
+
         public float Weight
         {
             set
@@ -39,7 +42,7 @@ namespace Kandooz.KVR
                 return weight;
             }
         }
-        public Finger(PlayableGraph graph,AnimationClip closed, AnimationClip opened, AvatarMask mask)
+        public Finger(PlayableGraph graph,AnimationClip closed, AnimationClip opened, AvatarMask mask,VariableTweener lerper)
         {
             mixer = AnimationLayerMixerPlayable.Create(graph, 2);
             var openPlayable = AnimationClipPlayable.Create(graph, opened);
@@ -50,7 +53,7 @@ namespace Kandooz.KVR
             mixer.SetLayerMaskFromAvatarMask(0, mask);
             mixer.SetInputWeight(0, 1);
             mixer.SetInputWeight(1, 0);
-            crossFadingWeight = new CrossFadingFloat();
+            crossFadingWeight = new TweenableFloat(lerper);
             crossFadingWeight.onChange += (value) =>
             {
                 mixer.SetInputWeight(0, 1 - value);
